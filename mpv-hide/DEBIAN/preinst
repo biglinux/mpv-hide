@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+package_name=mpv-hide
+mkdir -p "/usr/share/dpkgdivert/mpv-hide"
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/mpv-hide/usrshareapplicationsmpv.desktop" --rename "/usr/share/applications/mpv.desktop"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/share/applications/mpv.desktop")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/mpv-hide/usrshareapplicationsmpv.desktop" --rename "/usr/share/applications/mpv.desktop"
+fi
+;;
+esac
+exit 0

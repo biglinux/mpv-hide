@@ -1,0 +1,11 @@
+Package: mpv-hide
+Version: 1.0.0-1big1
+Depends: mpv
+Architecture: all
+Maintainer: Bruno Goncalves <biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:28
+Description: Hide MPV icon in menu
+
+

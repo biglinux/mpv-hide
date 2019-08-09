@@ -5,7 +5,7 @@ Architecture: all
 Maintainer: Bruno Goncalves <biglinux.com.br>
 Section: admin
 Priority: optional
-Installed-Size:28
+Installed-Size:20
 Description: Hide MPV icon in menu
 
 
